@@ -41,6 +41,10 @@
     font-weight: 400;
     letter-spacing: .05em;
   }
+
+  &__cta {
+    margin-top: 1.5rem;
+  }
 }
 
 // ── Info panel ──
@@ -183,3 +187,30 @@
 
   &:hover { background: $c-primary; transform: translateY(-2px); }
 }
+
+// ── CTA Final ──
+.dest-cta {
+  background-color: $c-light;
+  text-align: center;
+  padding: 6rem 2rem;
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+
+    h2 {
+      font-family: $font-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: $c-dark;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: $c-gray;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+  }
+}
+

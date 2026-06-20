@@ -1,0 +1,570 @@
+@use '../abstracts' as *;
+
+// ══════════════════════════════════════
+// NovaTours — Inspiración Page Styles
+// ══════════════════════════════════════
+
+.insp-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  @include flex(column, center, center);
+  text-align: center;
+  color: $c-white;
+  padding: 0 1.5rem;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.05);
+    filter: brightness(0.6);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+
+    p {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: $c-accent;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: $font-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    span {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba($c-white, 0.85);
+      max-width: 600px;
+      display: inline-block;
+      line-height: 1.6;
+    }
+  }
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+}
+
+.blog-layout {
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.blog-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.blog-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  @include flex(column, null, null);
+  gap: 2.5rem;
+}
+
+.widget {
+  background-color: $c-white;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border: 1px solid $c-gray-light;
+
+  &__title {
+    font-family: $font-serif;
+    font-size: 1.25rem;
+    color: $c-dark;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $c-accent;
+  }
+
+  &__content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: $c-gray;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include flex(column, null, null);
+    gap: 0.8rem;
+
+    a {
+      color: $c-gray;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      @include flex(row, center, null);
+      gap: 0.5rem;
+      @include transition;
+
+      i {
+        font-size: 0.75rem;
+        color: $c-accent;
+        @include transition(0.3s ease);
+      }
+
+      &:hover {
+        color: $c-primary;
+
+        i {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+
+  .tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include flex(column, null, null);
+    gap: 1.25rem;
+
+    li {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: $c-gray;
+
+      strong {
+        color: $c-dark;
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .blog-layout {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .blog-sidebar {
+    width: 100%;
+  }
+}
+
+.insp-card {
+  background-color: $c-white;
+  border-radius: 0; // Sin bordes redondeados según la directiva
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  @include flex(column, null, null);
+  height: 100%;
+  @include transition;
+
+  // Clases para animación de filtro JS
+  &.is-hidden {
+    display: none !important;
+  }
+  
+  &.is-animating-out {
+    animation: fadeOutScale 0.3s forwards ease-in;
+  }
+  
+  &.is-animating-in {
+    animation: fadeInScale 0.4s forwards ease-out;
+  }
+
+  @keyframes fadeOutScale {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.95); }
+  }
+
+  @keyframes fadeInScale {
+    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+
+    .insp-card__img {
+      transform: scale(1.06);
+    }
+  }
+
+  &__img-wrap {
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include transition(0.8s cubic-bezier(0.25, 1, 0.5, 1));
+  }
+
+  &__content {
+    padding: 2.25rem;
+    @include flex(column, null, null);
+    flex-grow: 1;
+  }
+
+  &__path {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba($c-gray, 0.5);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    a {
+      color: rgba($c-gray, 0.6);
+      text-decoration: none;
+      @include transition;
+
+      &:hover {
+        color: $c-primary;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-serif;
+    font-size: 1.4rem;
+    color: $c-dark;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+
+  &__desc {
+    color: $c-gray;
+    line-height: 1.65;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__read {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: $c-primary;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    @include transition;
+
+    i {
+      @include transition(0.3s ease);
+    }
+
+    &:hover {
+      color: $c-accent;
+
+      i {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__meta {
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: rgba($c-gray, 0.7);
+    @include flex(row, center, space-between);
+    border-top: 1px solid $c-gray-light;
+    padding-top: 1.25rem;
+  }
+
+  &__author {
+    @include flex(row, center, null);
+    gap: 0.5rem;
+    font-weight: 700;
+    color: $c-dark;
+  }
+
+  &__avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: $c-primary;
+    color: $c-white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    @include flex(row, center, center);
+  }
+
+  &__date {
+    font-size: 0.85rem;
+    color: rgba($c-gray, 0.7);
+    @include flex(row, center, null);
+    gap: 0.35rem;
+  }
+}
+
+.insp-featured {
+  position: relative;
+  padding: 8rem 1.5rem;
+  text-align: center;
+  color: $c-white;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.5);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: $c-accent;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-family: $font-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: rgba($c-white, 0.9);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.blog-filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid $c-gray-light;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.filter-pill {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $c-gray;
+  border: 1px solid $c-gray-light;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  @include transition;
+
+  &.active, &:hover {
+    background-color: $c-dark;
+    color: $c-white;
+    border-color: $c-dark;
+  }
+}
+
+// ── Detalle del Artículo de Blog ──
+.post-header {
+  margin-bottom: 2rem;
+
+  &__path {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $c-accent;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
+
+    a {
+      color: $c-accent;
+      text-decoration: none;
+      @include transition;
+
+      &:hover {
+        color: $c-primary;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: $c-dark;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  &__meta {
+    @include flex(row, center, null);
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: $c-gray;
+    border-bottom: 1px solid $c-gray-light;
+    padding-bottom: 1.5rem;
+
+    .post-author {
+      @include flex(row, center, null);
+      gap: 0.5rem;
+      font-weight: 700;
+      color: $c-dark;
+    }
+
+    .post-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: $c-primary;
+      color: $c-white;
+      font-size: 0.8rem;
+      font-weight: 800;
+      @include flex(row, center, center);
+    }
+  }
+}
+
+.post-featured-media {
+  margin: 0 0 2.5rem 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  figcaption {
+    font-size: 0.85rem;
+    color: $c-gray;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-style: italic;
+  }
+}
+
+.post-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: $c-gray;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  h2, h3 {
+    font-family: $font-serif;
+    color: $c-dark;
+    margin: 2.5rem 0 1.25rem 0;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  blockquote {
+    font-family: $font-serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: $c-dark;
+    border-left: 4px solid $c-accent;
+    padding: 0.5rem 0 0.5rem 2rem;
+    margin: 2.5rem 0;
+    line-height: 1.6;
+  }
+
+  ul, ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+
+    li {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.post-author-box {
+  background-color: $c-light;
+  padding: 2rem;
+  margin-top: 4rem;
+  @include flex(row, center, null);
+  gap: 2rem;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: $c-primary;
+    color: $c-white;
+    font-size: 1.75rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    @include flex(row, center, center);
+  }
+
+  &__info {
+    h5 {
+      font-size: 1.1rem;
+      color: $c-dark;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: $c-gray;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+}

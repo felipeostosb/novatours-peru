@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspiración y Guías de Viaje en Perú | NovaTours Perú</title>
+  <meta name="description"
+    content="Relatos de viaje, guías fotográficas y consejos prácticos para planificar tu próxima aventura en el Perú.">
+  <meta name="geo.region" content="PE">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/400.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/700.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/800.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ═══════ NAVBAR ═══════ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="index.html" class="navbar__brand"><strong>Nova</strong> Tours</a>
+
+      <ul class="navbar__menu">
+        <li><a href="index.html#destinos">Destinos</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="inspiracion.html" class="active">Inspiración</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="index.html#destinos" class="btn btn--primary btn--sm">Explorar</a>
+      </div>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="navbar__mobile" id="mobile-menu">
+      <a href="index.html#destinos">Destinos</a>
+      <a href="experiencias.html">Experiencias</a>
+      <a href="inspiracion.html" class="active">Inspiración</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ═══════ CONTENIDO PRINCIPAL ═══════ -->
+  <main>
+    <article>
+      <!-- Hero de la Página de Inspiración -->
+      <section class="insp-hero animate-fade-in">
+        <img class="insp-hero__bg" src="https://picsum.photos/id/1043/1800/1200" alt="Inspiración de viaje y paisajes del Perú">
+        <div class="dest-hero__overlay"></div>
+        <div class="insp-hero__content">
+          <p>Relatos & lookbook</p>
+          <h1>Inspiración para tu Próximo Viaje</h1>
+          <span>Déjate guiar por crónicas visuales y consejos prácticos para adentrarte en la magia de nuestro territorio.</span>
+        </div>
+      </section>
+
+      <!-- Layout Tipo Blog con Sidebar (Aside) Semántico -->
+      <div class="blog-container">
+        <!-- Filtros Minimalistas de Categorías (UX de Alto Nivel) -->
+        <nav class="blog-filters reveal" aria-label="Filtros de artículos">
+          <a href="#" class="filter-pill active" data-filter="all">Todos</a>
+          <a href="#" class="filter-pill" data-filter="aventura">Aventura</a>
+          <a href="#" class="filter-pill" data-filter="gastronomia">Gastronomía</a>
+          <a href="#" class="filter-pill" data-filter="fotografia">Fotografía</a>
+          <a href="#" class="filter-pill" data-filter="cultura">Cultura Viva</a>
+          <a href="#" class="filter-pill" data-filter="misticismo">Misticismo</a>
+        </nav>
+
+        <div class="blog-layout">
+          <!-- Contenido Principal: Artículos -->
+          <main class="blog-main">
+            <div class="blog-list">
+              <!-- Tarjeta de Artículo 1 -->
+              <article class="insp-card reveal" data-category="aventura">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/1016/800/600" alt="Camino Inca hacia Machu Picchu, Cusco" loading="lazy">
+                </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Aventura</a>
+                  </div>
+                  <h3 class="insp-card__title">5 Consejos esenciales para conquistar el Camino Inca</h3>
+                  <p class="insp-card__desc">Todo lo que necesitas saber sobre aclimatación, equipo técnico y la preparación mental para recorrer la ruta pedestre más famosa de América.</p>
+                  <a href="blog/camino-inca.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">MS</span>
+                      Mateo Silva
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 14 Jun, 2026</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tarjeta de Artículo 2 -->
+              <article class="insp-card reveal" data-category="gastronomia">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/429/800/600" alt="Plato tradicional peruano en Lima" loading="lazy">
+                </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Gastronomía</a>
+                  </div>
+                  <h3 class="insp-card__title">Guía del Sibarita: Qué comer en Lima durante 48 horas</h3>
+                  <p class="insp-card__desc">Un itinerario culinario diseñado para recorrer desde las carretillas de cebiche tradicionales en el puerto hasta la innovadora propuesta de alta cocina limeña.</p>
+                  <a href="blog/lima-sibarita.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">SR</span>
+                      Sofía Ruiz
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 10 Jun, 2026</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tarjeta de Artículo 3 -->
+              <article class="insp-card reveal" data-category="fotografia">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/1053/800/600" alt="Atardecer en el Lago Titicaca, Puno" loading="lazy">
+                </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Fotografía</a>
+                  </div>
+                  <h3 class="insp-card__title">Secretos de luz para capturar el atardecer en el Titicaca</h3>
+                  <p class="insp-card__desc">Aprende a configurar tu cámara para retratar los reflejos turquesas del lago navegable más alto del mundo durante la hora dorada andina.</p>
+                  <a href="blog/titicaca-atardecer.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">CV</span>
+                      Carlos Vega
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 05 Jun, 2026</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tarjeta de Artículo 4 -->
+              <article class="insp-card reveal" data-category="aventura">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/1022/800/600" alt="Reserva Pacaya Samiria, Loreto" loading="lazy">
+                </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Aventura</a>
+                  </div>
+                  <h3 class="insp-card__title">Flora y Fauna en la Reserva Nacional Pacaya Samiria</h3>
+                  <p class="insp-card__desc">Explora el espejo de la selva. Consejos prácticos para avistar delfines rosados, perezosos y caimanes en el corazón de la Amazonía peruana.</p>
+                  <a href="blog/pacaya-samiria.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">AG</span>
+                      Andrés Gómez
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 28 May, 2026</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tarjeta de Artículo 5 -->
+              <article class="insp-card reveal" data-category="misticismo">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/343/800/600" alt="Rituales de Sanación en Cusco" loading="lazy">
+                </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Misticismo</a>
+                  </div>
+                  <h3 class="insp-card__title">Rituales de Sanación Andina en el Valle Sagrado</h3>
+                  <p class="insp-card__desc">Un acercamiento respetuoso a las ceremonias de purificación dirigidas por chamanes locales en entornos sagrados de Cusco.</p>
+                  <a href="blog/sanacion-valle-sagrado.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">LC</span>
+                      Lucía Cerna
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 20 May, 2026</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tarjeta de Artículo 6 -->
+              <article class="insp-card reveal" data-category="cultura">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/1011/800/600" alt="Arte Textil de Taquile, Puno" loading="lazy">
+                </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Cultura Viva</a>
+                  </div>
+                  <h3 class="insp-card__title">Los Hilos del Tiempo: El Arte Textil de Taquile</h3>
+                  <p class="insp-card__desc">Descubre el significado cultural detrás de los tejidos declarados Patrimonio de la Humanidad por la UNESCO en las islas del Titicaca.</p>
+                  <a href="blog/textiles-taquile.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">MT</span>
+                      Manuel Torres
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 12 May, 2026</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tarjeta de Artículo 7 -->
+              <article class="insp-card reveal" data-category="aventura">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/1015/800/600" alt="Fortaleza de Kuélap en Amazonas" loading="lazy">
+                 </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Aventura</a>
+                  </div>
+                  <h3 class="insp-card__title">El Enigma de Kuélap: La ciudad sobre las nubes</h3>
+                  <p class="insp-card__desc">Una expedición a la fortaleza de los Chachapoyas. Cómo llegar, qué ver y por qué compite en asombro con Machu Picchu.</p>
+                  <a href="blog/kuelap.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">MS</span>
+                      Mateo Silva
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 05 May, 2026</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tarjeta de Artículo 8 -->
+              <article class="insp-card reveal" data-category="gastronomia">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/431/800/600" alt="Pisco Sour tradicional" loading="lazy">
+                 </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Gastronomía</a>
+                  </div>
+                  <h3 class="insp-card__title">Ruta del Pisco: El destilado bandera</h3>
+                  <p class="insp-card__desc">Un viaje por las bodegas de Ica y Lunahuaná descubriendo el proceso artesanal y los secretos para el Pisco Sour perfecto.</p>
+                  <a href="blog/pisco-sour.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">SR</span>
+                      Sofía Ruiz
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 28 Abr, 2026</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tarjeta de Artículo 9 -->
+              <article class="insp-card reveal" data-category="fotografia">
+                <div class="insp-card__img-wrap">
+                  <img class="insp-card__img" src="https://picsum.photos/id/1084/800/600" alt="Cañón del Colca, Arequipa" loading="lazy">
+                 </div>
+                <div class="insp-card__content">
+                  <div class="insp-card__path">
+                    <a href="inspiracion.html">Inspiración</a> &gt; <a href="experiencias.html">Fotografía</a>
+                  </div>
+                  <h3 class="insp-card__title">El Vuelo del Cóndor en el Colca</h3>
+                  <p class="insp-card__desc">Guía fotográfica: lentes, exposición y ubicación exacta en la Cruz del Cóndor para retratar al ave voladora más grande del mundo.</p>
+                  <a href="blog/condor-colca.html" class="insp-card__read">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                  <div class="insp-card__meta">
+                    <span class="insp-card__author">
+                      <span class="insp-card__avatar">CV</span>
+                      Carlos Vega
+                    </span>
+                    <span class="insp-card__date"><i class="fa-regular fa-calendar"></i> 15 Abr, 2026</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </main>
+
+          <!-- Lateral / Sidebar (Aside) -->
+          <aside class="blog-sidebar reveal">
+            <!-- Widget: Autor -->
+            <div class="widget">
+              <h4 class="widget__title">Sobre el Blog</h4>
+              <div class="widget__content">
+                <p>Nuestros cronistas viajan por el Perú recopilando consejos prácticos, rutas gastronómicas y secretos fotográficos para inspirar tu próximo viaje.</p>
+              </div>
+            </div>
+
+            <!-- Widget: Categorías -->
+            <div class="widget">
+              <h4 class="widget__title">Categorías</h4>
+              <ul class="widget__list">
+                <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right"></i> Aventura Andina</a></li>
+                <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right"></i> Alta Gastronomía</a></li>
+                <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right"></i> Cultura Viva</a></li>
+                <li><a href="experiencias.html"><i class="fa-solid fa-chevron-right"></i> Misticismo y Bienestar</a></li>
+              </ul>
+            </div>
+
+            <!-- Widget: Consejos Rápidos -->
+            <div class="widget">
+              <h4 class="widget__title">Tips Rápidos de Viaje</h4>
+              <ul class="tips-list">
+                <li>
+                  <strong>Aclimatación (Soroche):</strong>
+                  Bebe mate de coca al llegar a Cusco o Puno para adaptarte a la altitud y evitar malestares.
+                </li>
+                <li>
+                  <strong>Equipaje y Capas:</strong>
+                  El clima andino varía bruscamente. Vístete en capas: mañanas templadas, tardes calurosas y noches muy frías.
+                </li>
+                <li>
+                  <strong>Moneda Local:</strong>
+                  Lleva algo de efectivo en Soles (PEN) para comprar artesanías locales o pagar en zonas rurales.
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Bloque Destacado de Gran Formato -->
+      <section class="insp-featured reveal">
+        <img class="insp-featured__bg" src="https://picsum.photos/id/1022/1800/1000" alt="Selva amazónica de Loreto" loading="lazy">
+        <div class="dest-hero__overlay"></div>
+        <div class="insp-featured__content">
+          <span>Relato destacado</span>
+          <h2>La Magia Oculta de la Amazonía</h2>
+          <p>Navega ríos infinitos que reflejan el cielo como espejos gigantes, despierta con el canto de aves exóticas y sumérgete en el pulmón verde de Sudamérica. Loreto te espera para una expedición inigualable.</p>
+          <a href="destinos/loreto.html" class="btn btn--primary">
+            <i class="fa-solid fa-compass"></i>&nbsp; Descubrir Loreto
+          </a>
+        </div>
+      </section>
+
+      <!-- Sección CTA Final -->
+      <section class="dest-cta reveal">
+        <div class="dest-cta__content">
+          <h2>¿Listo para tu aventura?</h2>
+          <p>Consulta las tarifas y horarios de vuelos en tiempo real para planificar tu viaje a este destino.</p>
+          <a href="https://novairlines.app/" target="_blank" rel="noopener" class="btn btn--primary">
+            <i class="fa-solid fa-plane"></i>&nbsp; Consultar pasajes
+          </a>
+        </div>
+      </section>
+
+      <!-- Botón Volver Flotante -->
+      <a href="index.html#destinos" class="back-btn" aria-label="Volver al inicio">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </article>
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h2><strong>Nova</strong> Tours</h2>
+        <p>Inspirando viajes a través de narrativas visuales. Descubre la belleza del Perú en su máxima expresión.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <p>&copy; 2026 NOVATOURS. TURISMO Y EXPERIENCIAS EN PERÚ.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

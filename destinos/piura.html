@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piura — Turismo en Costa norte del Perú | NovaTours Perú</title>
+  <meta name="description"
+    content="Descubre los atractivos turísticos de Piura: Máncora, Los Órganos y Vichayito. Guía de viaje.">
+  <meta name="geo.region" content="PE-PIU">
+  <meta name="geo.placename" content="Piura">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/400.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/700.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/800.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+  <!-- ═══════ NAVBAR ═══════ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="../index.html" class="navbar__brand"><strong>Nova</strong> Tours</a>
+
+      <ul class="navbar__menu">
+        <li><a href="../index.html#destinos">Destinos</a></li>
+        <li><a href="../experiencias.html">Experiencias</a></li>
+        <li><a href="../inspiracion.html">Inspiración</a></li>
+        <li><a href="../contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="../contacto.html" class="btn btn--primary btn--sm">Contactar</a>
+      </div>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="navbar__mobile" id="mobile-menu">
+      <a href="../index.html#destinos">Destinos</a>
+      <a href="../experiencias.html">Experiencias</a>
+      <a href="../inspiracion.html">Inspiración</a>
+      <a href="../contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ═══════ CONTENIDO DEL DESTINO ═══════ -->
+  <main>
+    <article>
+      <!-- Hero de la Página de Destino -->
+      <section class="dest-hero">
+        <img class="dest-hero__bg" src="https://picsum.photos/id/1050/2000/1200" alt="Destino turístico Piura, Costa norte del Perú">
+        <div class="dest-hero__overlay"></div>
+        <div class="dest-hero__content reveal">
+          <p class="dest-hero__subtitle">Sol Eterno y Océano Cálido</p>
+          <h1>Piura</h1>
+          <p class="dest-hero__geo">📍 Costa norte del Perú · Playas tropicales · Máncora · Surf · Avistamiento de ballenas · Playas del norte</p>
+          <a href="../contacto.html" class="btn btn--primary dest-hero__cta">
+            <i class="fa-solid fa-paper-plane"></i>&nbsp; Planifica tu viaje
+          </a>
+        </div>
+      </section>
+
+      <!-- Panel de Información de Llegada y Consejos -->
+      <section class="dest-info reveal">
+        <div class="dest-info__inner">
+          <div class="dest-info__col">
+            <h4><i class="fa-solid fa-plane-arrival"></i> Llegada y Vuelos</h4>
+            <p>Puedes arribar al aeropuerto de Piura (PIU) o Talara (TYL). Este último está más cerca de las principales playas del norte peruano.</p>
+          </div>
+          <div class="dest-info__divider"></div>
+          <div class="dest-info__col">
+            <h4><i class="fa-solid fa-circle-info"></i> Recomendaciones</h4>
+            <p>Un refugio tropical con sol todo el año. Traslados sencillos por la Panamericana Norte. Meca de mariscos frescos, surf y atardeceres inolvidables.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lista de Atractivos Turísticos -->
+      <section class="dest-places">
+        <div class="dest-places__header reveal">
+          <h2>Atractivos Principales</h2>
+          <div class="dest-places__line"></div>
+        </div>
+        
+        <div class="dest-places__list">
+          <!-- Atractivo 1 -->
+          <div class="place reveal">
+            <div class="place__img-wrap">
+              <img src="https://picsum.photos/id/13/1600/1200" alt="Máncora — atractivo turístico en Piura, Perú" loading="lazy">
+            </div>
+            <div class="place__text">
+              <span class="place__number">01</span>
+              <h3 class="place__title">Máncora</h3>
+              <div class="place__sep"></div>
+              <p class="place__desc">El balneario más famoso del norte peruano. Vibrante, soleado y con olas perfectas para surf. Escena nocturna activa y hospedaje que va del lujo al estilo mochilero.</p>
+            </div>
+          </div>
+
+          <!-- Atractivo 2 -->
+          <div class="place place--reverse reveal">
+            <div class="place__img-wrap">
+              <img src="https://picsum.photos/id/1055/1600/1200" alt="Los Órganos — atractivo turístico en Piura, Perú" loading="lazy">
+            </div>
+            <div class="place__text">
+              <span class="place__number">02</span>
+              <h3 class="place__title">Los Órganos</h3>
+              <div class="place__sep"></div>
+              <p class="place__desc">Naturaleza marina en su esplendor. Desde aquí parten embarcaciones para avistar ballenas jorobadas (julio-octubre) y nadar junto a tortugas marinas.</p>
+            </div>
+          </div>
+
+          <!-- Atractivo 3 -->
+          <div class="place reveal">
+            <div class="place__img-wrap">
+              <img src="https://picsum.photos/id/42/1600/1200" alt="Vichayito — atractivo turístico en Piura, Perú" loading="lazy">
+            </div>
+            <div class="place__text">
+              <span class="place__number">03</span>
+              <h3 class="place__title">Vichayito</h3>
+              <div class="place__sep"></div>
+              <p class="place__desc">El epítome de la tranquilidad en la costa peruana. Arena blanca, aguas templadas y atardeceres perfectos para caminatas solitarias o cabalgatas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección CTA Final -->
+      <section class="dest-cta reveal">
+        <div class="dest-cta__content">
+          <h2>¿Listo para tu aventura?</h2>
+          <p>Consulta las tarifas y horarios de vuelos en tiempo real para planificar tu viaje a este destino.</p>
+          <a href="../contacto.html" class="btn btn--primary">
+            <i class="fa-solid fa-paper-plane"></i>&nbsp; Planifica tu viaje
+          </a>
+        </div>
+      </section>
+
+      <!-- Botón Volver Flotante -->
+      <a href="../index.html#destinos" class="back-btn" aria-label="Volver al inicio">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </article>
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h2><strong>Nova</strong> Tours</h2>
+        <p>Inspirando viajes a través de narrativas visuales. Descubre la belleza del Perú en su máxima expresión.</p>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <p>© 2026 NovaTours. Turismo y Experiencias en Perú.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lima — Turismo en Costa central del Perú | NovaTours Perú</title>
+  <meta name="description"
+    content="Descubre los atractivos turísticos de Lima: Centro Histórico, Miraflores, Barranco y el Circuito Mágico del Agua. Guía de viaje y recomendaciones.">
+  <meta name="geo.region" content="PE-LIM">
+  <meta name="geo.placename" content="Lima">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/400.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/700.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/800.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+  <!-- ═══════ NAVBAR ═══════ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="../index.html" class="navbar__brand"><strong>Nova</strong> Tours</a>
+
+      <ul class="navbar__menu">
+        <li><a href="../index.html#destinos">Destinos</a></li>
+        <li><a href="../experiencias.html">Experiencias</a></li>
+        <li><a href="../inspiracion.html">Inspiración</a></li>
+        <li><a href="../contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="../contacto.html" class="btn btn--primary btn--sm">Contactar</a>
+      </div>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="navbar__mobile" id="mobile-menu">
+      <a href="../index.html#destinos">Destinos</a>
+      <a href="../experiencias.html">Experiencias</a>
+      <a href="../inspiracion.html">Inspiración</a>
+      <a href="../contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ═══════ CONTENIDO DEL DESTINO ═══════ -->
+  <main>
+    <article>
+      <!-- Hero de la Página de Destino -->
+      <section class="dest-hero">
+        <img class="dest-hero__bg" src="https://picsum.photos/id/164/2000/1200" alt="Destino turístico Lima, Costa central del Perú">
+        <div class="dest-hero__overlay"></div>
+        <div class="dest-hero__content reveal">
+          <p class="dest-hero__subtitle">La Ciudad de los Reyes</p>
+          <h1>Lima</h1>
+          <p class="dest-hero__geo">📍 Costa central del Perú · Capital gastronómica de América · Patrimonio UNESCO</p>
+          <a href="../contacto.html" class="btn btn--primary dest-hero__cta">
+            <i class="fa-solid fa-paper-plane"></i>&nbsp; Planifica tu viaje
+          </a>
+        </div>
+      </section>
+
+      <!-- Panel de Información de Llegada y Consejos -->
+      <section class="dest-info reveal">
+        <div class="dest-info__inner">
+          <div class="dest-info__col">
+            <h4><i class="fa-solid fa-plane-arrival"></i> Llegada y Vuelos</h4>
+            <p>Llegada principal por el Aeropuerto Internacional Jorge Chávez (LIM). Conexión directa desde las principales capitales del mundo.</p>
+          </div>
+          <div class="dest-info__divider"></div>
+          <div class="dest-info__col">
+            <h4><i class="fa-solid fa-circle-info"></i> Recomendaciones</h4>
+            <p>La capital culinaria de América. Clima húmedo todo el año. Se recomienda moverse mediante aplicaciones de transporte por los distritos costeros.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lista de Atractivos Turísticos -->
+      <section class="dest-places">
+        <div class="dest-places__header reveal">
+          <h2>Atractivos Principales</h2>
+          <div class="dest-places__line"></div>
+        </div>
+        
+        <div class="dest-places__list">
+          <!-- Atractivo 1 -->
+          <div class="place reveal">
+            <div class="place__img-wrap">
+              <img src="https://picsum.photos/id/54/1600/1200" alt="Centro Histórico de Lima — atractivo turístico en Lima, Perú" loading="lazy">
+            </div>
+            <div class="place__text">
+              <span class="place__number">01</span>
+              <h3 class="place__title">Centro Histórico de Lima</h3>
+              <div class="place__sep"></div>
+              <p class="place__desc">Maravíllate con la arquitectura colonial declarada Patrimonio de la Humanidad, los balcones tallados de madera y desciende a las misteriosas Catacumbas del Convento de San Francisco.</p>
+            </div>
+          </div>
+
+          <!-- Atractivo 2 -->
+          <div class="place place--reverse reveal">
+            <div class="place__img-wrap">
+              <img src="https://picsum.photos/id/57/1600/1200" alt="Miraflores y Malecón Cisneros — atractivo turístico en Lima, Perú" loading="lazy">
+            </div>
+            <div class="place__text">
+              <span class="place__number">02</span>
+              <h3 class="place__title">Miraflores y Malecón Cisneros</h3>
+              <div class="place__sep"></div>
+              <p class="place__desc">Siente la brisa del Océano Pacífico. El malecón es perfecto para recorrer en bicicleta, observar a los parapentistas o disfrutar de la alta gastronomía con vista al mar.</p>
+            </div>
+          </div>
+
+          <!-- Atractivo 3 -->
+          <div class="place reveal">
+            <div class="place__img-wrap">
+              <img src="https://picsum.photos/id/122/1600/1200" alt="Distrito Bohemio de Barranco — atractivo turístico en Lima, Perú" loading="lazy">
+            </div>
+            <div class="place__text">
+              <span class="place__number">03</span>
+              <h3 class="place__title">Distrito Bohemio de Barranco</h3>
+              <div class="place__sep"></div>
+              <p class="place__desc">El rincón del arte limeño. Atraviesa el Puente de los Suspiros, piérdete entre calles decoradas con murales vibrantes y disfruta de cócteles de pisco en casonas restauradas.</p>
+            </div>
+          </div>
+
+          <!-- Atractivo 4 -->
+          <div class="place place--reverse reveal">
+            <div class="place__img-wrap">
+              <img src="https://picsum.photos/id/65/1600/1200" alt="Circuito Mágico del Agua — atractivo turístico en Lima, Perú" loading="lazy">
+            </div>
+            <div class="place__text">
+              <span class="place__number">04</span>
+              <h3 class="place__title">Circuito Mágico del Agua</h3>
+              <div class="place__sep"></div>
+              <p class="place__desc">La noche limeña se ilumina en este inmenso parque Guinness World Record. Un espectáculo visual fascinante de fuentes cibernéticas, láseres y música.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección CTA Final -->
+      <section class="dest-cta reveal">
+        <div class="dest-cta__content">
+          <h2>¿Listo para tu aventura?</h2>
+          <p>Consulta las tarifas y horarios de vuelos en tiempo real para planificar tu viaje a este destino.</p>
+          <a href="../contacto.html" class="btn btn--primary">
+            <i class="fa-solid fa-paper-plane"></i>&nbsp; Planifica tu viaje
+          </a>
+        </div>
+      </section>
+
+      <!-- Botón Volver Flotante -->
+      <a href="../index.html#destinos" class="back-btn" aria-label="Volver al inicio">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </article>
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h2><strong>Nova</strong> Tours</h2>
+        <p>Inspirando viajes a través de narrativas visuales. Descubre la belleza del Perú en su máxima expresión.</p>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <p>© 2026 NovaTours. Turismo y Experiencias en Perú.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

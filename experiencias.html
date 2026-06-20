@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiencias Únicas de Viaje en Perú | NovaTours Perú</title>
+  <meta name="description"
+    content="Descubre nuestras experiencias de viaje seleccionadas en Perú: Aventura, Gastronomía, Misticismo y Cultura Viva.">
+  <meta name="geo.region" content="PE">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/400.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/700.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/800.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ═══════ NAVBAR ═══════ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="index.html" class="navbar__brand"><strong>Nova</strong> Tours</a>
+
+      <ul class="navbar__menu">
+        <li><a href="index.html#destinos">Destinos</a></li>
+        <li><a href="experiencias.html" class="active">Experiencias</a></li>
+        <li><a href="inspiracion.html">Inspiración</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="index.html#destinos" class="btn btn--primary btn--sm">Explorar</a>
+      </div>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="navbar__mobile" id="mobile-menu">
+      <a href="index.html#destinos">Destinos</a>
+      <a href="experiencias.html" class="active">Experiencias</a>
+      <a href="inspiracion.html">Inspiración</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ═══════ CONTENIDO PRINCIPAL ═══════ -->
+  <main>
+    <article>
+
+      <!-- Hero de la Página de Experiencias -->
+      <section class="exp-hero animate-fade-in">
+        <img class="exp-hero__bg" src="https://picsum.photos/id/29/1800/1200" alt="Experiencias de viaje únicas en el Perú">
+        <div class="dest-hero__overlay"></div>
+        <div class="exp-hero__content">
+          <p>Curaduría de viajes</p>
+          <h1>Experiencias Diseñadas para el Alma</h1>
+          <span>Descubre las vivencias más profundas y sensoriales del Perú a través de recorridos exclusivos creados por especialistas.</span>
+        </div>
+        <!-- Indicador de scroll -->
+        <div class="exp-hero__scroll-hint">
+          <span>Desliza</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <!-- ═══════ SECCIÓN PRINCIPAL: PANELS DE SCROLL ═══════ -->
+      <section class="exp-showcase" id="exp-showcase">
+
+        <!-- Navegación lateral de puntos -->
+        <nav class="exp-dots" id="exp-dots" aria-label="Navegación de experiencias">
+          <a href="#exp-1" class="exp-dots__dot active" data-label="Aventura"></a>
+          <a href="#exp-2" class="exp-dots__dot" data-label="Gastronomía"></a>
+          <a href="#exp-3" class="exp-dots__dot" data-label="Cultura"></a>
+          <a href="#exp-4" class="exp-dots__dot" data-label="Misticismo"></a>
+        </nav>
+
+        <!-- Panel 1: Aventura -->
+        <div class="exp-panel" id="exp-1" data-index="0">
+          <figure class="exp-panel__media">
+            <img src="https://picsum.photos/id/1015/1800/1200" alt="Trekking y aventura en la Cordillera de los Andes" loading="lazy">
+          </figure>
+          <div class="exp-panel__overlay"></div>
+          <div class="exp-panel__content">
+            <span class="exp-panel__number">01</span>
+            <span class="exp-panel__tag">Aventura Andina</span>
+            <h2 class="exp-panel__title">Trekking y Rutas de Montaña</h2>
+            <p class="exp-panel__desc">Camina entre glaciares imponentes y valles de colores. Recorridos diseñados para desafiar tus límites físicos y recompensarte con vistas memorables en la cima del mundo.</p>
+            <ul class="exp-panel__list">
+              <li><i class="fa-solid fa-circle-check"></i> Guías de alta montaña certificados</li>
+              <li><i class="fa-solid fa-circle-check"></i> Campamentos premium con domos calefaccionados</li>
+              <li><i class="fa-solid fa-circle-check"></i> Rutas adaptadas a tu nivel de condición</li>
+            </ul>
+            <a href="https://novairlines.app/" target="_blank" rel="noopener" class="exp-panel__cta">
+              Reservar experiencia <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel 2: Gastronomía -->
+        <div class="exp-panel exp-panel--right" id="exp-2" data-index="1">
+          <figure class="exp-panel__media">
+            <img src="https://picsum.photos/id/292/1800/1200" alt="Gastronomía peruana y cocina tradicional en Lima" loading="lazy">
+          </figure>
+          <div class="exp-panel__overlay exp-panel__overlay--right"></div>
+          <div class="exp-panel__content">
+            <span class="exp-panel__number">02</span>
+            <span class="exp-panel__tag">Alta Gastronomía</span>
+            <h2 class="exp-panel__title">Sabor e Identidad Peruana</h2>
+            <p class="exp-panel__desc">Descubre por qué el Perú es reconocido mundialmente como el mejor destino culinario. Un viaje de sabores que va desde la costa pacífica hasta los insumos andinos ancestrales.</p>
+            <ul class="exp-panel__list">
+              <li><i class="fa-solid fa-circle-check"></i> Clases privadas de cocina con chefs galardonados</li>
+              <li><i class="fa-solid fa-circle-check"></i> Maridaje exclusivo de pisco y chocolates orgánicos</li>
+              <li><i class="fa-solid fa-circle-check"></i> Reservas garantizadas en restaurantes de élite</li>
+            </ul>
+            <a href="https://novairlines.app/" target="_blank" rel="noopener" class="exp-panel__cta">
+              Reservar experiencia <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel 3: Cultura -->
+        <div class="exp-panel" id="exp-3" data-index="2">
+          <figure class="exp-panel__media">
+            <img src="https://picsum.photos/id/1011/1800/1200" alt="Turismo comunitario y cultura viva en el Lago Titicaca" loading="lazy">
+          </figure>
+          <div class="exp-panel__overlay"></div>
+          <div class="exp-panel__content">
+            <span class="exp-panel__number">03</span>
+            <span class="exp-panel__tag">Cultura Viva</span>
+            <h2 class="exp-panel__title">Comunidades y Tradición</h2>
+            <p class="exp-panel__desc">Sumérgete en la vida cotidiana de las comunidades nativas. Aprende textilería, técnicas de pesca ancestrales y comparte relatos alrededor del fuego bajo las estrellas.</p>
+            <ul class="exp-panel__list">
+              <li><i class="fa-solid fa-circle-check"></i> Pernocte en hospedajes rurales familiares</li>
+              <li><i class="fa-solid fa-circle-check"></i> Talleres vivenciales de cerámica y tejido andino</li>
+              <li><i class="fa-solid fa-circle-check"></i> Mediación cultural justa y de beneficio mutuo</li>
+            </ul>
+            <a href="https://novairlines.app/" target="_blank" rel="noopener" class="exp-panel__cta">
+              Reservar experiencia <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel 4: Misticismo -->
+        <div class="exp-panel exp-panel--right" id="exp-4" data-index="3">
+          <figure class="exp-panel__media">
+            <img src="https://picsum.photos/id/343/1800/1200" alt="Misticismo y bienestar espiritual en el Valle Sagrado de Cusco" loading="lazy">
+          </figure>
+          <div class="exp-panel__overlay exp-panel__overlay--right"></div>
+          <div class="exp-panel__content">
+            <span class="exp-panel__number">04</span>
+            <span class="exp-panel__tag">Misticismo y Bienestar</span>
+            <h2 class="exp-panel__title">Conexión y Armonía Espiritual</h2>
+            <p class="exp-panel__desc">Reconéctate en los santuarios naturales más energéticos del planeta. Experimenta rituales ancestrales orientados a la sanación mental y el bienestar físico integral.</p>
+            <ul class="exp-panel__list">
+              <li><i class="fa-solid fa-circle-check"></i> Ceremonia de ofrenda a la Pachamama</li>
+              <li><i class="fa-solid fa-circle-check"></i> Yoga frente al amanecer de los Andes</li>
+              <li><i class="fa-solid fa-circle-check"></i> Baños en pozas termales medicinales privadas</li>
+            </ul>
+            <a href="https://novairlines.app/" target="_blank" rel="noopener" class="exp-panel__cta">
+              Reservar experiencia <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Sección CTA Final -->
+      <section class="dest-cta reveal">
+        <div class="dest-cta__content">
+          <h2>¿Listo para tu aventura?</h2>
+          <p>Consulta las tarifas y horarios de vuelos en tiempo real para planificar tu viaje.</p>
+          <a href="https://novairlines.app/" target="_blank" rel="noopener" class="btn btn--primary">
+            <i class="fa-solid fa-plane"></i>&nbsp; Consultar pasajes
+          </a>
+        </div>
+      </section>
+
+      <!-- Botón Volver Flotante -->
+      <a href="index.html#destinos" class="back-btn" aria-label="Volver al inicio">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </article>
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h2><strong>Nova</strong> Tours</h2>
+        <p>Inspirando viajes a través de narrativas visuales. Descubre la belleza del Perú en su máxima expresión.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <p>&copy; 2026 NOVATOURS. TURISMO Y EXPERIENCIAS EN PERÚ.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

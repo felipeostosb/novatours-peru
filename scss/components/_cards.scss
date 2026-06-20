@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .card {
+  display: block;
   position: relative;
   aspect-ratio: 3 / 4;
   overflow: hidden;

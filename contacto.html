@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Planifica tu Viaje al Perú | NovaTours Perú</title>
+  <meta name="description"
+    content="Contáctanos para planificar tu experiencia de viaje perfecta en el Perú. Nuestros especialistas están listos para diseñar tu itinerario a medida.">
+  <meta name="geo.region" content="PE">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/400.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/700.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/800.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ═══════ NAVBAR ═══════ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="index.html" class="navbar__brand"><strong>Nova</strong> Tours</a>
+
+      <ul class="navbar__menu">
+        <li><a href="index.html#destinos">Destinos</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="inspiracion.html">Inspiración</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="contacto.html" class="btn btn--primary btn--sm">Reservar</a>
+      </div>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="navbar__mobile" id="mobile-menu">
+      <a href="index.html#destinos">Destinos</a>
+      <a href="experiencias.html">Experiencias</a>
+      <a href="inspiracion.html">Inspiración</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ═══════ CONTENIDO PRINCIPAL ═══════ -->
+  <main>
+
+    <!-- Hero compacto con imagen de fondo -->
+    <section class="contact-hero">
+      <img
+        class="contact-hero__bg"
+        src="https://picsum.photos/id/1043/1800/1200"
+        alt="Planifica tu viaje al Perú con NovaTours">
+      <div class="contact-hero__overlay"></div>
+      <div class="contact-hero__content animate-fade-in">
+        <p>Hablemos de tu próximo viaje</p>
+        <h1>Diseñamos tu experiencia perfecta</h1>
+        <span>Un especialista dedicado te guiará en cada decisión para que tu viaje al Perú sea exactamente como lo imaginas.</span>
+      </div>
+    </section>
+
+    <!-- ═══════ LAYOUT PRINCIPAL ═══════ -->
+    <section class="contact-main">
+      <div class="contact-main__inner">
+
+        <!-- Columna izquierda: información de contacto -->
+        <aside class="contact-info reveal">
+          <span class="contact-info__eyebrow">Información de contacto</span>
+          <h2 class="contact-info__title">Estamos aquí para ayudarte</h2>
+          <p class="contact-info__desc">
+            Nuestro equipo de especialistas en turismo peruano responde en menos de 24 horas. Cuéntanos tu sueño y lo convertimos en itinerario.
+          </p>
+
+          <ul class="contact-info__list">
+            <li class="contact-info__item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text">
+                <strong>Teléfono</strong>
+                <a href="tel:+5114225500">+51 1 422 5500</a>
+              </div>
+            </li>
+            <li class="contact-info__item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text">
+                <strong>Email</strong>
+                <a href="mailto:hola@novatours.pe">hola@novatours.pe</a>
+              </div>
+            </li>
+            <li class="contact-info__item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text">
+                <strong>Oficina principal</strong>
+                <span>Av. Larco 1301, Miraflores<br>Lima 15074, Perú</span>
+              </div>
+            </li>
+            <li class="contact-info__item">
+              <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="contact-text">
+                <strong>Horario de atención</strong>
+                <span>Lun – Vie: 9:00am – 7:00pm<br>Sáb: 10:00am – 2:00pm</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-info__divider"></div>
+
+          <nav class="contact-info__social" aria-label="Redes sociales">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </nav>
+        </aside>
+
+        <!-- Columna derecha: formulario -->
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="contact-form__header">
+              <h2>Cuéntanos sobre tu viaje</h2>
+              <p>Completa el formulario y un especialista se pondrá en contacto contigo.</p>
+            </div>
+
+            <!-- Nombre y Apellido -->
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="nombre">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre"
+                  required>
+              </div>
+              <div class="contact-form__group">
+                <label for="apellido">Apellido</label>
+                <input
+                  type="text"
+                  id="apellido"
+                  name="apellido"
+                  placeholder="Tu apellido"
+                  required>
+              </div>
+            </div>
+
+            <!-- Email y Teléfono -->
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="email">Correo electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="correo@ejemplo.com"
+                  required>
+              </div>
+              <div class="contact-form__group">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="+51 999 000 000">
+              </div>
+            </div>
+
+            <!-- Destino y Tipo de experiencia -->
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="destino">Destino de interés</label>
+                <select id="destino" name="destino">
+                  <option value="" disabled selected>Selecciona un destino</option>
+                  <option value="cusco">Cusco y Machu Picchu</option>
+                  <option value="lima">Lima</option>
+                  <option value="arequipa">Arequipa y Cañón del Colca</option>
+                  <option value="puno">Puno y Lago Titicaca</option>
+                  <option value="loreto">Loreto — Amazonía</option>
+                  <option value="ica">Ica y Paracas</option>
+                  <option value="otro">Otro / Circuito completo</option>
+                </select>
+              </div>
+              <div class="contact-form__group">
+                <label for="experiencia">Tipo de experiencia</label>
+                <select id="experiencia" name="experiencia">
+                  <option value="" disabled selected>¿Qué te apasiona?</option>
+                  <option value="aventura">Aventura y Trekking</option>
+                  <option value="gastronomia">Alta Gastronomía</option>
+                  <option value="cultura">Cultura Viva</option>
+                  <option value="misticismo">Misticismo y Bienestar</option>
+                  <option value="fotografia">Fotografía de Viaje</option>
+                  <option value="multiple">Varias experiencias</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Fecha de viaje y Número de viajeros -->
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="fecha">Fecha estimada de viaje</label>
+                <input
+                  type="date"
+                  id="fecha"
+                  name="fecha">
+              </div>
+              <div class="contact-form__group">
+                <label for="viajeros">Número de viajeros</label>
+                <select id="viajeros" name="viajeros">
+                  <option value="" disabled selected>¿Cuántos son?</option>
+                  <option value="1">Solo / 1 persona</option>
+                  <option value="2">Pareja / 2 personas</option>
+                  <option value="3-5">Grupo pequeño / 3-5</option>
+                  <option value="6-10">Grupo / 6-10</option>
+                  <option value="mas">Más de 10</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="contact-form__row contact-form__row--full">
+              <div class="contact-form__group">
+                <label for="mensaje">Cuéntanos tu sueño de viaje</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="Descríbenos qué tipo de experiencia buscas, qué lugares quieres visitar o cualquier detalle especial que debamos considerar..."></textarea>
+              </div>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit" class="contact-form__submit" id="submit-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              Enviar consulta
+            </button>
+
+            <p class="contact-form__note">
+              <i class="fa-solid fa-shield-halved"></i>
+              Tu información es confidencial. Nunca compartimos tus datos con terceros.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Banda de estadísticas -->
+    <section class="contact-stats">
+      <div class="contact-stats__inner">
+        <div class="contact-stats__item">
+          <strong>+12,000</strong>
+          <span>Viajeros satisfechos</span>
+        </div>
+        <div class="contact-stats__item">
+          <strong>9 destinos</strong>
+          <span>En todo el Perú</span>
+        </div>
+        <div class="contact-stats__item">
+          <strong>24h</strong>
+          <span>Tiempo de respuesta</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón Volver Flotante -->
+    <a href="index.html" class="back-btn" aria-label="Volver al inicio">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+  </main>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h2><strong>Nova</strong> Tours</h2>
+        <p>Inspirando viajes a través de narrativas visuales. Descubre la belleza del Perú en su máxima expresión.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <p>&copy; 2026 NOVATOURS. TURISMO Y EXPERIENCIAS EN PERÚ.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,380 @@
+@use '../abstracts' as *;
+
+// ══════════════════════════════════════
+// NovaTours — Experiencias Page Styles
+// ══════════════════════════════════════
+
+// ─── Hero ───────────────────────────────────────────────────────────────────
+.exp-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  @include flex(column, center, center);
+  text-align: center;
+  color: $c-white;
+  padding: 0 1.5rem;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.05);
+    filter: brightness(0.5);
+    transition: transform 8s ease-out;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+
+    p {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: $c-accent;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-family: $font-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 1.75rem;
+    }
+
+    span {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: rgba($c-white, 0.8);
+      max-width: 580px;
+      display: inline-block;
+      line-height: 1.7;
+    }
+  }
+
+  // Indicador de scroll animado
+  &__scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    @include flex(column, center, center);
+    gap: 0.5rem;
+    color: rgba($c-white, 0.5);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    i {
+      animation: bounce-arrow 1.8s ease-in-out infinite;
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%       { transform: translateY(8px); opacity: 1; }
+}
+
+
+// ─── Showcase Container ──────────────────────────────────────────────────────
+.exp-showcase {
+  position: relative;
+  width: 100%;
+}
+
+
+// ─── Lateral dot navigation ──────────────────────────────────────────────────
+.exp-dots {
+  position: fixed;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  @include flex(column, center, null);
+  gap: 1.25rem;
+  display: none; // oculto hasta que JS lo active
+
+  &.is-visible {
+    display: flex;
+  }
+
+  &__dot {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: rgba($c-white, 0.35);
+    border: 1px solid rgba($c-white, 0.5);
+    display: block;
+    cursor: pointer;
+    @include transition(0.3s ease);
+
+    // Tooltip label al hover
+    &::after {
+      content: attr(data-label);
+      position: absolute;
+      right: calc(100% + 1rem);
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $c-dark;
+      color: $c-white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      @include transition(0.25s ease);
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &.active {
+      background-color: $c-accent;
+      border-color: $c-accent;
+      transform: scale(1.4);
+    }
+
+    &:hover:not(.active) {
+      background-color: rgba($c-white, 0.7);
+    }
+  }
+}
+
+
+// ─── Individual Panels ───────────────────────────────────────────────────────
+.exp-panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+
+  // Imagen de fondo ocupa TODO
+  &__media {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include transition(1.5s cubic-bezier(0.25, 1, 0.5, 1));
+    }
+  }
+
+  &:hover .exp-panel__media img {
+    transform: scale(1.04);
+  }
+
+  // Overlay: gradiente desde la izquierda (oscuro) hacia la derecha (transparente)
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+      100deg,
+      rgba($c-dark, 0.97) 0%,
+      rgba($c-dark, 0.85) 30%,
+      rgba($c-dark, 0.4)  60%,
+      transparent 100%
+    );
+
+    // Para paneles invertidos: gradiente desde la derecha
+    &--right {
+      background: linear-gradient(
+        -100deg,
+        rgba($c-dark, 0.97) 0%,
+        rgba($c-dark, 0.85) 30%,
+        rgba($c-dark, 0.4)  60%,
+        transparent 100%
+      );
+    }
+  }
+
+  // Área de texto: alineada a la izquierda por defecto
+  &__content {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 520px;
+    color: $c-white;
+
+    // Animación de entrada al hacer reveal
+    opacity: 0;
+    transform: translateY(calc(-50% + 30px));
+    @include transition(0.8s $ease);
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+  }
+
+  // Paneles invertidos: texto a la derecha
+  &--right .exp-panel__content {
+    left: auto;
+    right: 8%;
+    text-align: right;
+  }
+
+  &--right .exp-panel__list li {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+
+  &__number {
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba($c-accent, 0.15);
+    line-height: 1;
+    display: block;
+    margin-bottom: -1rem;
+    font-family: $font-serif;
+  }
+
+  &__tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: $c-accent;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-family: $font-serif;
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    color: $c-white;
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+
+  &__desc {
+    color: rgba($c-white, 0.8);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1.75rem;
+    max-width: 440px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    @include flex(column, null, null);
+    gap: 0.65rem;
+
+    li {
+      @include flex(row, center, null);
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgba($c-white, 0.9);
+    }
+
+    i {
+      color: $c-accent;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $c-white;
+    text-decoration: none;
+    border-bottom: 2px solid $c-accent;
+    padding-bottom: 0.25rem;
+    @include transition(0.3s ease);
+
+    i {
+      @include transition(0.3s ease);
+    }
+
+    &:hover {
+      color: $c-accent;
+      i { transform: translateX(5px); }
+    }
+  }
+}
+
+
+// ─── Responsive ─────────────────────────────────────────────────────────────
+@media (max-width: $bp-lg) {
+  .exp-dots { right: 1.5rem; }
+
+  .exp-panel {
+    &__content {
+      left: 5%;
+      max-width: 420px;
+    }
+    &--right .exp-panel__content {
+      right: 5%;
+    }
+  }
+}
+
+@media (max-width: $bp-md) {
+  .exp-dots { display: none !important; }
+
+  .exp-panel {
+    height: auto;
+    min-height: 100vh;
+
+    &__overlay,
+    &__overlay--right {
+      background: linear-gradient(
+        to top,
+        rgba($c-dark, 0.98) 0%,
+        rgba($c-dark, 0.8)  50%,
+        rgba($c-dark, 0.3) 100%
+      ) !important;
+    }
+
+    &__content {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      transform: none !important;
+      padding: 8rem 1.5rem 5rem;
+      max-width: 100%;
+      opacity: 1 !important;
+      text-align: left !important;
+    }
+
+    &--right .exp-panel__content {
+      text-align: left !important;
+    }
+
+    &--right .exp-panel__list li {
+      flex-direction: row;
+    }
+
+    &__number { font-size: 3.5rem; }
+  }
+}
