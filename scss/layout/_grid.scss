@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.container {
+  width: 100%;
+  max-width: $bp-xl;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @include md  { padding: 0 3rem; }
+  @include xl  { padding: 0 5rem; }
+}

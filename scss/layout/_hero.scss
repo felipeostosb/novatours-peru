@@ -1,0 +1,103 @@
+@use '../abstracts' as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  @include flex(column, center, center);
+  overflow: hidden;
+
+  &__slider {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: $c-dark;
+  }
+
+  &__slide {
+    @include cover;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    @include transition(opacity);
+    transition-duration: 2s; // Slow, elegant fade
+    
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, .65) 0%,
+      rgba(0, 0, 0, .15) 40%,
+      rgba(0, 0, 0, .4) 100%
+    );
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 1.5rem;
+    max-width: 900px;
+
+    h1 {
+      color: $c-white;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, .3);
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    background: rgba($c-white, .15);
+    backdrop-filter: blur(8px);
+    color: $c-white;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: .5rem 1.25rem;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  &__sub {
+    color: rgba($c-white, .85) !important;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+
+  &__cta {
+    gap: .5rem;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 8px 30px rgba($c-primary, .4);
+  }
+
+  // ── Scroll indicator ──
+  &__scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    z-index: 2;
+    color: $c-white;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: rgba($c-white, .4);
+      margin: 1rem auto 0;
+    }
+  }
+}

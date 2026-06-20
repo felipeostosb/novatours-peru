@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: $font;
+  color: $c-dark;
+  background: $c-white;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img    { display: block; max-width: 100%; }
+a      { text-decoration: none; color: inherit; }
+ul     { list-style: none; }
+button { border: none; background: none; cursor: pointer; font: inherit; }
+input  { border: none; outline: none; font: inherit; }
+
+// ── Scrollbar ──
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: $c-light; }
+::-webkit-scrollbar-thumb { background: $c-gray-light; border-radius: 3px;
+  &:hover { background: $c-primary; }
+}
+
+// ── Utility ──
+.is-hidden { display: none !important; }
+
+::selection { background: $c-primary; color: $c-white; }

@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+@use 'sass:color';
+
+.search {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  max-width: 820px;
+  margin: 0 auto;
+  background: $c-white;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .15);
+  transform: translateY(50%);
+
+  &__tabs {
+    @include flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid $c-gray-light;
+    padding-bottom: .75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__tab {
+    font-size: .9rem;
+    font-weight: 600;
+    color: $c-gray;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid transparent;
+    @include transition;
+
+    &.is-active {
+      color: $c-primary;
+      border-bottom-color: $c-primary;
+    }
+    &:hover:not(.is-active) { color: $c-dark; }
+  }
+
+  &__body {
+    @include flex(row, center, space-between);
+    gap: 1rem;
+
+    input {
+      flex: 1;
+      padding: 1rem;
+      font-size: 1rem;
+      color: $c-dark;
+      &::placeholder { color: color.adjust($c-gray, $lightness: 15%); }
+    }
+  }
+
+  &__tip {
+    text-align: center;
+    font-size: .8rem;
+    color: $c-gray;
+    margin-top: 1rem;
+  }
+}

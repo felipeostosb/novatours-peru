@@ -1,0 +1,27 @@
+// ── Colors ──
+$c-primary:      #0066FF;
+$c-primary-dark: #0052CC;
+$c-dark:         #0A1628;
+$c-white:        #fff;
+$c-light:        #F5F7FA;
+$c-gray:         #6B7280;
+$c-gray-light:   #E5E7EB;
+$c-accent:       #C5A880;
+
+// ── Typography ──
+$font: 'Inter', sans-serif;
+$font-serif: 'Playfair Display', serif;
+$font-logo: 'Open Sauce One', sans-serif;
+
+// ── Breakpoints ──
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1400px;
+
+// ── Layout ──
+$nav-h: 72px;
+$radius: 0;
+
+// ── Motion ──
+$ease: cubic-bezier(.4, 0, .2, 1);
+$speed: .35s;

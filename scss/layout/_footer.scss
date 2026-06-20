@@ -1,0 +1,55 @@
+@use '../abstracts' as *;
+
+.footer {
+  background: $c-dark;
+  color: $c-white;
+  padding: 5rem 0 0;
+
+  &__inner {
+    max-width: $bp-xl;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    @include flex(column, center);
+    gap: 2rem;
+
+    @include md {
+      @include flex(row, center, space-between);
+      padding: 0 3rem;
+    }
+  }
+
+  &__brand {
+    text-align: center;
+    @include md { text-align: left; }
+
+    h2 { font-family: $font-logo; text-transform: uppercase; letter-spacing: .02em; margin-bottom: .75rem; }
+    p  { color: rgba($c-white, .4); font-size: .9rem; max-width: 400px; }
+  }
+
+  &__social {
+    @include flex;
+    gap: 1.5rem;
+
+    a {
+      color: rgba($c-white, .4);
+      font-size: 1.1rem;
+      @include transition(color);
+      &:hover { color: $c-primary; }
+    }
+  }
+
+  &__copy {
+    max-width: $bp-xl;
+    margin: 3rem auto 0;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid rgba($c-white, .08);
+    text-align: center;
+
+    p {
+      color: rgba($c-white, .3);
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+    }
+  }
+}

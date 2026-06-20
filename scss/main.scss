@@ -1,0 +1,24 @@
+// ══════════════════════════════════════
+// NovaTours — Main SASS Entry Point
+// ══════════════════════════════════════
+
+// Abstracts (no output, just tools)
+@use 'abstracts';
+
+// Base
+@use 'base/reset';
+@use 'base/typography';
+
+// Components
+@use 'components/buttons';
+@use 'components/cards';
+
+// Layout
+@use 'layout/navbar';
+@use 'layout/hero';
+@use 'layout/grid';
+@use 'layout/footer';
+
+// Pages
+@use 'pages/home';
+@use 'pages/destination';

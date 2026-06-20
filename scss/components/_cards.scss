@@ -1,0 +1,55 @@
+@use '../abstracts' as *;
+
+.card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: $radius;
+  cursor: pointer;
+
+  &__img {
+    @include cover;
+    @include transition(transform);
+    transition-duration: .6s;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 50%);
+    @include transition(background);
+  }
+
+  &__body {
+    position: absolute;
+    inset: 0;
+    padding: 2rem;
+    @include flex(column, flex-start, flex-end);
+    color: $c-white;
+  }
+
+
+  &__label {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    opacity: 0;
+    transform: translateY(8px);
+    @include transition;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    @include transition(color);
+  }
+
+
+  // ── Hover state ──
+  &:hover {
+    .card__img     { transform: scale(1.08); }
+    .card__overlay { background: linear-gradient(to top, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, .3) 100%); }
+    .card__label   { opacity: 1; transform: translateY(0); }
+    .card__title   { color: $c-primary; }
+  }
+}
