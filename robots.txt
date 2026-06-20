@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tours.tudominio.com/sitemap.xml
+Sitemap: https://peru.novairlines.app/sitemap.xml
