@@ -24,12 +24,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
     rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/400.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/700.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/800.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/400.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/700.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-one/800.css" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
@@ -74,14 +74,21 @@
     <section class="hero" id="hero">
       <div class="hero__slider">
         <!-- Imagen 1: Montañas/Andes -->
-        <img class="hero__slide is-active" src="https://picsum.photos/id/29/1400/900" alt="Andes peruanos"
+        <img class="hero__slide is-active" 
+          srcset="https://picsum.photos/id/29/600/600 600w, https://picsum.photos/id/29/1400/900 1400w"
+          sizes="(max-width: 600px) 600px, 1400px"
+          src="https://picsum.photos/id/29/1400/900" alt="Andes peruanos"
           fetchpriority="high">
         <!-- Imagen 2: Machu Picchu / Llama (Vista fascinante) -->
         <img class="hero__slide"
+          srcset="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80 600w, https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80 1400w"
+          sizes="(max-width: 600px) 600px, 1400px"
           src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
           alt="Llama observando la ciudadela inca de Machu Picchu" loading="lazy">
         <!-- Imagen 3: Deporte de acción / Surf -->
         <img class="hero__slide"
+          srcset="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80 600w, https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80 1400w"
+          sizes="(max-width: 600px) 600px, 1400px"
           src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
           alt="Surf en las playas del norte de Perú" loading="lazy">
       </div>
