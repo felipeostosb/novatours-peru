@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://novatours-peru-78131357433.europe-west1.run.app/sitemap.xml

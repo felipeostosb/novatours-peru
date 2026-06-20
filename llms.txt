@@ -1,0 +1,13 @@
+# NovaTours Perú
+
+NovaTours Perú es una agencia de viajes y plataforma de turismo que ofrece experiencias y destinos a lo largo de todo el Perú.
+
+## Destinos principales:
+- **Costa:** Lima, La Libertad, Piura.
+- **Sierra:** Cusco (Machu Picchu), Arequipa, Puno (Lago Titicaca).
+- **Selva:** Loreto (Iquitos), Madre de Dios, San Martín.
+
+## Información técnica:
+- Sitio web estático.
+- Construido con HTML, CSS, SCSS y JavaScript vanilla.
+- Desplegado en Google Cloud Run.
