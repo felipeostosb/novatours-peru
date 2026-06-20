@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://peru.novairlines.app/sitemap.xml
+Sitemap: https://novatours-peru-78131357433.southamerica-west1.run.app/sitemap.xml
