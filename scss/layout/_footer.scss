@@ -66,19 +66,20 @@
     .visitor-counter {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      font-size: 0.7rem;
-      color: rgba($c-white, .3);
+      gap: 0.4rem;
+      font-size: 0.65rem;
+      color: rgba($c-white, .25);
+      white-space: nowrap;
       
       @include md {
         position: absolute;
         right: 3rem;
       }
       
-      i { color: rgba($c-primary, .7); font-size: 0.8rem; }
+      i { color: rgba($c-primary, .5); font-size: 0.7rem; }
       strong { 
-        color: rgba($c-white, .5); 
-        font-weight: 600; 
+        color: rgba($c-white, .4); 
+        font-weight: 500; 
         letter-spacing: 0.05em;
       }
     }
