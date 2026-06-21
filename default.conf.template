@@ -2,6 +2,17 @@ server {
     listen       ${PORT};
     server_name  localhost;
 
+    gzip on;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+    gzip_min_length 1000;
+
+    location ~* \.(?:css|js|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
+        root   /usr/share/nginx/html;
+        expires 1M;
+        access_log off;
+        add_header Cache-Control "public";
+    }
+
     location / {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
