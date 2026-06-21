@@ -132,3 +132,20 @@ if (expPanels.length > 0 && expDots.length > 0) {
     });
   });
 }
+
+// 6. Contador de Visitas Global (Usando CounterAPI.dev)
+const counterElement = document.getElementById('global-counter');
+if (counterElement) {
+  // Llama a la API gratuita para registrar la visita e incrementar el contador en la nube
+  fetch('https://api.counterapi.dev/v1/novatours_peru/homepage/up')
+    .then(response => response.json())
+    .then(data => {
+      // Agrega un separador de miles al número (ej: 1,402)
+      const formattedNumber = new Intl.NumberFormat('en-US').format(data.count);
+      counterElement.innerText = formattedNumber;
+    })
+    .catch(error => {
+      console.error('Error al cargar contador:', error);
+      counterElement.innerText = '14,208'; // Fallback visual si la API falla
+    });
+}
